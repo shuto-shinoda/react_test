@@ -5,14 +5,22 @@ class Blog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isPublished: false
+      isPublished: false,
+      order: 1
     }
   }
+
+  // 公開状態を反転させる関数
+  togglePublished = () => {
+    this.setState( state: {
+      isPublished: !this.state.isPublished
+    })
+  };
+
   render() {
-    const authorName = "Shuto Shinoda"
     return (
       <>
-        <Article title={"Reactの使い方"} isPublished={this.state.isPublished}/>
+        <Article title={"Reactの使い方"} isPublished={this.state.isPublished} toggle={() => this.togglePublished()}/>
       </>
     )
   }
