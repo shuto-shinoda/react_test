@@ -24,9 +24,9 @@ import Article from "./Article";
     }
   }
 
-  // componentWillUnmount() {
-  //   document.getElementById('counter').removeEventListener('click', this.countUp)
-  // }
+  componentWillUnmount() {
+    document.getElementById('counter').removeEventListener('click', this.countUp)
+  }
 
   // 公開状態を反転させる関数
   togglePublished = () => {
