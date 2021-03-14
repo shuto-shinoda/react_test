@@ -18,11 +18,11 @@ import Article from "./Article";
     document.getElementById('counter').addEventListener('click', this.countUp)
   }
 
-  // componentDidUpdate() {
-  //   if (this.state.count >= 10) {
-  //     this.setState({count: 0 })
-  //   }
-  // }
+  componentDidUpdate() {
+    if (this.state.count >= 10) {
+      this.setState({count: 0 })
+    }
+  }
 
   // componentWillUnmount() {
   //   document.getElementById('counter').removeEventListener('click', this.countUp)
